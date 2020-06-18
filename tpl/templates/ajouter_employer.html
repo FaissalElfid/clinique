@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ajouter un employer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--pour les datepickers-->
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <!--boostrap-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+
+    <!--css-->
+    <link href="style/ajouter_employer.css" rel="Stylesheet" type="text/css">
+    <link href="style/table_employer.css" rel="Stylesheet" type="text/css">
+    
+    
+
+  </head>
+
+  <body>
+    {include file='employe_header.html'}
+    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist" style="font-size: 1.5rem;">
+      <li class="nav-item">
+        <a class="nav-link active" id="update-tab" data-toggle="tab" href="#update" role="tab" aria-controls="update" aria-selected="true">Modifier ou Supprimer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="add-tab" data-toggle="tab" href="#add" role="tab" aria-controls="add" aria-selected="false">Ajouter</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="update" role="tabpanel" aria-labelledby="update-tab">
+        {include file='table_employer.html'}
+      </div>
+      
+      <div class="tab-pane fade" id="add" role="tabpanel" aria-labelledby="add-tab">    {include file='body_ajouter_employer.html'}
+      </div>
+    </div>
+
+  {include file='footer.html'}
+</body>
+<script src="js/jquery.js"></script>
+
+<script src="materialize/js/materialize.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="js/ajouteremploye.js"></script>
+<script defer src="fontawesome/js/all.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,64 @@
+body{
+    font: menu 700;
+    position: relative;
+}
+
+  li { 
+    display: table-cell; 
+    position: relative; 
+  }
+  .sousligner {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.10em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+  .sousligner:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .sousligner:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  .navbarDropdown{
+    padding-top: 10px;
+  }
+  .connecterButton{
+    margin-right: 20px;
+  }
+  #logo{
+    width: 20px;
+  }
+  .button_avatar{
+    font-size: larger;
+    text-decoration: solid;
+    text-align: center;
+    padding-top: 16%;
+    background-color: #083B66;
+    color: white;
+    border-radius: 50%;
+    box-shadow: none;
+    width: 50px;
+    height: 50px;
+}
+.button_avatar:focus{
+  outline: none;
+  color: #fff;
+}
+
+.dropdown-menu.pull-left{
+  left:0;
+}

@@ -1,0 +1,33 @@
+body{
+  background-image: url(../image/background-services.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  padding: 40px 60px;
+  font-family: sans-serif;
+  text-align: center;
+  }
+  h1{
+    text-decoration: underline;
+  }
+  #seconnecter-container{
+    background-color: #F5F5F5;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 20px;
+    padding: 10px;
+    border: black solid 2px;
+    border-radius: 25px;
+    text-align: center;
+  }
+  .text{
+    padding-right: 10%;
+    padding-left: 10%;
+    
+  }
+  #nvcompte{
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 1px;
+    height: 34px;
+  }

@@ -1,0 +1,89 @@
+<?php /* Smarty version Smarty-3.1.14, created on 2020-05-28 17:50:12
+         compiled from "tpl\templates\acceuil.html" */ ?>
+<?php /*%%SmartyHeaderCode:16292462865eb57a34c838c5-55012204%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '2b4cbb92465503d2a0b3999e1024aacc06933f27' => 
+    array (
+      0 => 'tpl\\templates\\acceuil.html',
+      1 => 1590688209,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '16292462865eb57a34c838c5-55012204',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5eb57a34d20e86_75236279',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5eb57a34d20e86_75236279')) {function content_5eb57a34d20e86_75236279($_smarty_tpl) {?><head><link href="style/acceuil.css" rel="Stylesheet" type="text/css">
+
+</head>
+<div class="section-1 imagebox1">
+	<!--
+	<h1 style="color: #323438;">Bienvenue sur le site de la polyclinique de chirurgie et médecine générale
+        la Clinique ELFID de Fès.</h1>-->
+</div>
+
+<div class="section-2">
+	<h1>Bienvenue sur le site de la polyclinique de chirurgie et médecine générale
+        la Clinique ELFID de Fès.</h1><br>
+	<h3>Un éventail de spécialités médicales dans tous les domaines de la médecine actuelle.</h3>
+
+	<p>
+		<strong style="text-decoration: underline;">ELFID Holding – Acteur majeur de la santé privée au Maroc :</strong>
+		Vous donnes la possibilité de reservez vos rendez-vous à distance.<br>
+		
+		<strong>Afin de profiter de nos service à distance vous devez vous connecter </strong>
+		 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p><br>
+	<div class="row">
+		<p class="col-md-4">
+	<i class="fas fa-2x fa-user-md"></i><br><strong>SOLUTIONS DE SOINS DE SANTÉ</strong><br>
+	Des solutions flexibles pour un meilleur accès aux soins de santé .
+		</p>
+	<p class="col-md-4">
+		<i class="fas fa-2x fa-procedures"></i><br><strong>DISPONIBILITÉ 24h/24 - 7 J/7</strong><br>
+		Une clinique à Fès - une disponibilité permanente.
+			</p>
+		<p class="col-md-4">
+			<i class="fas fa-2x fa-laptop-medical"></i><br><strong>TECHNOLOGIE AVANCÉE</strong><br>
+			Tous nos dispositifs médicaux sont de dernières technologies .
+				</p>
+	</div>
+	</div>
+
+<div class="section-3 imagebox2 ">
+	<h2>Ce site est ouvert à tous les patients et tous les professionnels de la santé, ainsi qu’aux personnes intéressées par nos services.</h2>
+</div>
+
+<div class="section-4 box">
+	
+	<h2>Un éventail de spécialités médicales dans tous les domaines de la médecine actuelle.</h2>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<h3 style="text-decoration: underline;padding-bottom: 5px;">Covid19 Precautions</h3>
+		<iframe width="70%" height="400" src="https://www.youtube.com/embed/zK4fZXzo5QI?autoplay=1&loop=1&disablekb=1&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+	</p>
+
+</div>
+
+
+
+
+<script src="js/contact.js"></script>
+<script src="js/jquery.js"></script><?php }} ?>

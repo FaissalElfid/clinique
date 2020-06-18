@@ -1,0 +1,49 @@
+<head><link href="style/styleHeader.css" rel="Stylesheet" type="text/css"></head>
+<html>
+        <header >
+            <nav style="height: 110px;" class="navbar navbar-expand-lg navbar-light bg-light">
+                <a href="index.php"><img src="image/logos.png" id="logo" alt="irisi" style="width: 100px;"></a>
+          <a class="navbar-brand sousligner" href="admin.php" style="margin-left: 30px;">  Acceuil</a>
+          <!-- style="width: 100px;height: ;" style=""position: fixed;top:100px;width:100%;(or à for the simple level);width=100%-->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item sousligner">
+                <a class="nav-link " href="employe.php">Médecins</a>
+              </li>
+              <li class="nav-item sousligner"><!--we can add active for the class Patients & visiteurs-->
+                <a class="nav-link " href="meeting.php">Rendez-vous</a>
+              </li>
+              <li class="nav-item sousligner"><!--we can add active for the class Patients & visiteurs-->
+                <a class="nav-link " href="users.php">Utilisateurs</a>
+              </li>
+              <!--
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Utilisation de la base de données avec Smarty</a>
+              </li>-->
+            </ul>
+            {if isset($smarty.session.admin)}
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">{$smarty.session.nom} {$smarty.session.prenom}</a>
+            </li>
+            <div class="dropdown">
+              <button class="btn dropdown button_avatar" type="button" id="avatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-left: 18%;"><h4>{$smarty.session.initials}</h4></button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="avatar">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="#">Paramètres</a>
+                <a class="dropdown-item" href="deconnecter.php">Se deconnecter</a>
+              </div>
+            </div>
+            {/if}
+            
+          </div>
+        </nav>
+                </header>
+                <script src="js/header.js"></script>
+                <!--
+            {debug}-->
+
+</html>

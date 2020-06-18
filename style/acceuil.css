@@ -1,0 +1,104 @@
+*{
+    font-style: Raleway,'Trebuchet MS', Helvetica, sans-serif;
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 100%;
+    height: 505px;
+    padding: 40px 60px;
+    color: #EEF7FC;
+    font-family: sans-serif;
+    text-align: center;
+}
+.imagebox1{
+      background-image: url(../image/hospital.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+    width: 100%;
+    height: 450px;
+    padding: 40px 60px;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.section-2{
+    width: 100%;
+    padding: 40px 60px;
+    color: black;
+    font-family: sans-serif;
+    text-align: center;
+    background: #F2EADA;
+}
+
+.imagebox2{
+    background-image: url(../image/steto.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    padding: 40px 60px;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+.section-background-contact{
+    background-image: url(../image/steto.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    height: 600px;
+}
+small {
+    color: black;
+}
+.section-background-contact form{
+    padding-top: 30px;
+}
+.section-background-contact h2{
+    padding-top: 20px;
+}
+.contact-form {
+    background-color: rgba(0.95, 0.92, 0.85, 0.5);
+    position: absolute;
+    padding-left: 15%;
+    padding-right: 15%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#nomContact{
+    margin-left: 15px;
+}
+#sujetContact{
+    margin-left: 55px;
+}
+
+.section-info{
+    width: 100%;
+    padding: 45px 60px;
+    color: #EEF7FC;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #4F7E65;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-4{
+    background: #4F7E65;
+    height: 780px;
+}
+
+.box p{
+    font-size: 20px;
+    margin-top: 100px;
+}
+
+.box h1{
+    font-size: 50px;
+    text-shadow:  0px 0px 5px #000;
+}

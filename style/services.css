@@ -1,0 +1,59 @@
+section{
+    position: relative;
+    z-index: auto;
+    background-image: url(../image/background-services.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 1020px;
+    padding: 40px 60px;
+    font-family: sans-serif;
+    text-align: center;
+}
+.menu{
+    font-size: 2em;
+    height: 300px;
+    opacity: 0.7;
+}
+.menu:hover{
+    opacity: 1;
+}
+section form{
+    background-color: white;
+}
+#btn1{
+    background-color: white;
+    background-image: url(../image/calender.jpg);
+    background-size: cover;
+    color:black;
+    font-family: sans-serif;
+    text-align: center;
+    
+}
+
+#btn2{
+    margin-top: 20px;
+    background-image: url(../image/services-steto.jpg);
+    background-size: cover;
+    color:black;
+    font-family: sans-serif;
+    text-align: center;
+}
+#btn3{
+    margin-top: 20px;
+    background-image: url(../image/map.jpg);
+    background-size: cover;
+    color:black;
+    font-family: sans-serif;
+    text-align: center;
+}
+.non-connecter{
+    background-color: rgba(0.95, 0.92, 0.85, 0.8);
+    position: absolute;
+    text-align: center;
+    color: white;
+    padding-top: 25%;
+    z-index: 4;
+    width: 100%;
+    height: 1020px;
+}

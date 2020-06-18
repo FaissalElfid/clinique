@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link href="style/services.css" rel="Stylesheet" type="text/css">
+        <title>ELFID Clinique</title>
+    </head>
+    <body>
+            {include file='header.html'}
+            {if ! isset($smarty.session.user)}
+            <div class="non-connecter">
+                <form action="seconnecter.php">
+                <h1>Veuillez se connecter pour utiliser nos services online</h1><br>
+                <button type="submit" class="btn btn-outline-light"><h2>Se connecter</h2></button>
+            </form>
+            </div>
+            {/if}
+            <section>
+                <form>
+                <button id="btn1" type="button" class="btn  btn-lg btn-block menu" onclick="meeting()"><h1>Prendre un rendez-vous</h1></button>
+            </form>
+            <form>
+                <button id="btn2" type="button" class="btn  btn-lg btn-block menu" onclick="contact()"><h2>Contacter un médecin</h2></button>
+            </form>
+        <form>
+                <button id="btn3" type="button" class="btn  btn-lg btn-block menu" onclick="map()"><h2>L'itinéraire vers la clinique</h2></button>
+            </form>
+                <!--
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>-->
+            </section>
+            <!--{debug}-->
+            {include file='footer.html'}
+            <script src="js/jquery.js"></script>
+            <script src="js/services.js"></script>
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

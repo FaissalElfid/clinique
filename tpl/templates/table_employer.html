@@ -1,0 +1,190 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nom complet</th>
+              <th scope="col">Specialité</th>
+              <th scope="col">Prix</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {foreach $employes as $emp}
+            <tr>
+              <th scope="row">{$emp.id}</th>
+              <td>{$emp.nom} {$emp.prenom}</td>
+              <td>{$emp.specialite}</td>
+              <td>{$emp.prix}</td>
+              <td>
+                <button type="button" class="btn btn-primary plus" id="p{$emp.id}" data_id="{$emp.id}"><i class="far fa-eye"></i></button>
+                <button type="button" class="btn btn-success edit" id="e{$emp.id}" data_id="{$emp.id}"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-danger delete" id="d{$emp.id}" data_id="{$emp.id}"><i class="far fa-trash-alt"></i></button>
+              </td>
+            </tr>
+            {/foreach}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="plusInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Employés</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+          <h2 style="text-decoration: underline;">Plus d'information</h2>
+          <div class="table-responsive">
+            <table id="table" class="table table-bordered">
+              <tr>
+                  <td width="30%">
+                    <label>id</label></td>
+                    <td id="td_id" width="70%"></td>
+              </tr>
+              <tr>
+                <td width="30%">
+                  <label>Nom complet</label></td>
+                  <td id="td_med" width="70%"></td>
+            </tr>
+              <tr>
+                  <td width="30%">
+                    <label>Prix </label></td>
+                    <td id="td_prix" width="70%"></td>
+              </tr>
+              <tr>
+                  <td width="30%">
+                    <label>Email </label></td>
+                    <td id="td_email" width="70%"></td>
+              </tr>
+              <tr>
+                  <td width="30%">
+                    <label>Telephone </label></td>
+                    <td id="td_telephone" width="70%"></td>
+              </tr>
+              <tr>
+                  <td width="30%">
+                    <label>Specialité </label></td>
+                    <td id="td_specialite" width="70%"></td>
+              </tr>
+              <tr>
+                  <td width="30%">
+                    <label>Date de naissance : </label></td>
+                    <td id="td_naissance" width="70%"></td>
+              </tr>
+              
+            </thead>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Employés</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+          <h2 style="text-decoration: underline;">Modifier</h2>
+          <form method="POST" onsubmit="return false;">   
+            <div class="text form-group  row">
+              <div class="input-field col s6">
+              <input id="prenom" type="text" class="validate" required>
+              <label for="prenom">Prenom</label>
+              <span class="helper-text" data-error="Veuillez entrer votre nom"></span>
+            </div>
+            <div class="input-field col s6">
+              <input id="nom" type="text" class="validate">
+              <label for="nom">Nom de famille</label>
+            </div>
+          </div>
+          <div class="text form-group row">
+              <div class="input-field col s6">
+                  <label for="date_naissance">date de naissance</label>
+                 <input type="text" id="date_naissance" class="datepicker validate" required>
+              </div>
+              <div class="input-field col s6">
+                  <label style="padding-left: 10px;">Sexe :  </label>
+                  <p>
+                    <label>
+                      <input class="with-gap" name="group1" type="radio" id="r1" value="M" checked />
+                      <span>Masculin</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" name="group1" type="radio" id="r2" value="F" />
+                      <span>Féminin</span>
+                    </label>
+                  </p>
+              </div>
+          </div>
+                <div class="text form-group row">
+                      <div class="input-field col s12">
+                        <select id="spec" name="specialite"  required>
+                          {foreach $specs as $spe}
+                          <option value={$spe.id}>{$spe.specialite}</option>
+                          {/foreach}
+                        </select>
+                        <label>Spécialité</label>
+                      </div>
+          </div>
+            <div class="text form-group">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="email" type="email" class="validate" name="email" required>
+                  <label for="email">Adress email</label>
+                  <span class="helper-text" data-error="veuillez entrer une adress mail valide" data-success="valide"></span>
+                </div>
+              </div>      
+            </div>
+            <div class="text form-group">
+              <div class="row">
+            <div class="input-field col s12">
+              <input id="tel" type="tel" name="Telephone" class="validate" required>
+              <label for="icon_telephone">Telephone</label>
+            </div>
+          </div>
+        </div>
+              <div class="text form-group">
+                <div class="row">
+                      <div class="input-field col s12">
+                          <textarea id="autre" class="materialize-textarea"></textarea>
+                          <label for="autre">Informations supplémentaire</label>
+                      </div>
+                    </div>
+                    <div class="row">
+        
+                      <div class="input-field col s12">
+        
+                        <input id="prix" type="number" class="validate"></input>
+                        <label for="prix">Prix :</label>
+                    </div>
+                  </div>
+              </div>
+            <div class="buttons">
+              <button id="ajouter" class="btn btn-lg btn-primary" type="submit">Ajouter</button><br>
+            </div>
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

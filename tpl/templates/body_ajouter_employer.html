@@ -1,0 +1,91 @@
+<head></head>
+<section>
+<div id="seconnecter-container" style="position: relative;">
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">Ajouter employer</h1>
+      <p>Ces informations vont être afficher directement aux clients</p>
+    </div>
+  <form method="POST" onsubmit="add();return false;">   
+    <div class="text form-group  row">
+      <div class="input-field col s6">
+      <input id="prenom" type="text" class="validate" required>
+      <label for="prenom">Prenom</label>
+      <span class="helper-text" data-error="Veuillez entrer votre nom"></span>
+    </div>
+    <div class="input-field col s6">
+      <input id="nom" type="text" class="validate">
+      <label for="nom">Nom de famille</label>
+    </div>
+  </div>
+  <div class="text form-group row">
+      <div class="input-field col s6">
+          <label for="date_naissance">date de naissance</label>
+         <input type="text" id="date_naissance" class="datepicker validate" required>
+      </div>
+      <div class="input-field col s6">
+          <label style="padding-left: 10px;">Sexe :  </label>
+          <p>
+            <label>
+              <input class="with-gap" name="group1" type="radio" id="r1" value="M" checked />
+              <span>Masculin</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input class="with-gap" name="group1" type="radio" id="r2" value="F" />
+              <span>Féminin</span>
+            </label>
+          </p>
+      </div>
+  </div>
+        <div class="text form-group row">
+              <div class="input-field col s12">
+                <select id="spec" name="specialite"  required>
+                  {foreach $specs as $spe}
+                  <option value={$spe.id}>{$spe.specialite}</option>
+                  {/foreach}
+                </select>
+                <label>Spécialité</label>
+              </div>
+  </div>
+    <div class="text form-group">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" name="email" required>
+          <label for="email">Adress email</label>
+          <span class="helper-text" data-error="veuillez entrer une adress mail valide" data-success="valide"></span>
+        </div>
+      </div>      
+    </div>
+    <div class="text form-group">
+      <div class="row">
+    <div class="input-field col s12">
+      <input id="tel" type="tel" name="Telephone" class="validate" required>
+      <label for="icon_telephone">Telephone</label>
+    </div>
+  </div>
+</div>
+      <div class="text form-group">
+        <div class="row">
+              <div class="input-field col s12">
+                  <textarea id="autre" class="materialize-textarea"></textarea>
+                  <label for="autre">Informations supplémentaire</label>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="input-field col s12">
+
+                <input id="prix" type="number" class="validate"></input>
+                <label for="prix">Prix :</label>
+            </div>
+          </div>
+      </div>
+    <div class="buttons">
+      <button id="ajouter" class="btn btn-lg btn-primary" type="submit">Ajouter</button><br>
+    </div>
+    
+  </form>
+</div>
+
+</section>
